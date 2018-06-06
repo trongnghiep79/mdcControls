@@ -33,6 +33,7 @@
             // TabControlWithCloseButton
             // 
             this.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.HotTrack = true;
             this.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControlWithCloseButton_DrawItem);
             this.ResumeLayout(false);

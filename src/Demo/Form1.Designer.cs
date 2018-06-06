@@ -100,21 +100,21 @@
             this.tabControlWithCloseButton1.Controls.Add(this.tabPage9);
             this.tabControlWithCloseButton1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlWithCloseButton1.HotTrack = true;
-            this.tabControlWithCloseButton1.Location = new System.Drawing.Point(12, 48);
+            this.tabControlWithCloseButton1.Location = new System.Drawing.Point(12, 52);
             this.tabControlWithCloseButton1.Name = "tabControlWithCloseButton1";
             this.tabControlWithCloseButton1.Padding = new System.Drawing.Point(12, 4);
             this.tabControlWithCloseButton1.SelectedIndex = 0;
-            this.tabControlWithCloseButton1.Size = new System.Drawing.Size(422, 24);
+            this.tabControlWithCloseButton1.Size = new System.Drawing.Size(422, 26);
             this.tabControlWithCloseButton1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(414, 0);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "tabPage ...1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage7
@@ -149,10 +149,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 261);
+            this.ClientSize = new System.Drawing.Size(461, 157);
             this.Controls.Add(this.tabControlWithCloseButton1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControlWithCloseButton1.ResumeLayout(false);
