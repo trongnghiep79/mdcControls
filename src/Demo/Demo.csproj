@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{121E489F-60DA-4813-8541-4036E6AF7DA6}</ProjectGuid>
+    <ProjectGuid>{64B3CF66-3865-47AC-824B-9AA8802C3628}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TabControlWithCloseButtonAndAddButton</RootNamespace>
-    <AssemblyName>TabControlWithCloseButtonAndAddButton</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>Demo</RootNamespace>
+    <AssemblyName>Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,10 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add.png" />
+    <ProjectReference Include="..\TabControlWithCloseButtonAndAddButton\TabControlWithCloseButton.csproj">
+      <Project>{121e489f-60da-4813-8541-4036e6af7da6}</Project>
+      <Name>TabControlWithCloseButton</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

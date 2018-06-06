@@ -52,7 +52,7 @@ namespace TabControlWithCloseButtonAndAddButton
                 {
                     var tabRect = this.tabControl1.GetTabRect(i);
                     tabRect.Inflate(-2, -2);
-                    var closeImage = Properties.Resources.Close;
+                    var closeImage = TabControlWithCloseButton.Properties.Resources.Close;
                     var imageRect = new Rectangle(
                         (tabRect.Right - closeImage.Width),
                         tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
@@ -73,14 +73,14 @@ namespace TabControlWithCloseButtonAndAddButton
             tabRect.Inflate(-2, -2);
             if (e.Index == this.tabControl1.TabCount - 1)
             {
-                var addImage = Properties.Resources.Add;
+                var addImage = TabControlWithCloseButton.Properties.Resources.Add;
                 e.Graphics.DrawImage(addImage,
                     tabRect.Left + (tabRect.Width - addImage.Width) / 2,
                     tabRect.Top + (tabRect.Height - addImage.Height) / 2);
             }
             else
             {
-                var closeImage = Properties.Resources.Close;
+                var closeImage = TabControlWithCloseButton.Properties.Resources.Close;
                 e.Graphics.DrawImage(closeImage,
                     (tabRect.Right - closeImage.Width),
                     tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
