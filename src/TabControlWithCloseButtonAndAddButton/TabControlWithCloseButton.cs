@@ -12,7 +12,7 @@ namespace TabControlWithCloseButton
 {
     public partial class TabControlWithCloseButton : TabControl
     {
-        public TabControlWithCloseButton(): base()
+        public TabControlWithCloseButton() : base()
         {
             InitializeComponent();
 
@@ -21,7 +21,6 @@ namespace TabControlWithCloseButton
 
             this.DrawItem += TabControlWithCloseButton_DrawItem;
             this.MouseDown += TabControlWithCloseButton_MouseDown;
-            this.Selecting += TabControlWithCloseButton_Selecting;
             this.HandleCreated += TabControlWithCloseButton_HandleCreated;
         }
 
@@ -31,10 +30,6 @@ namespace TabControlWithCloseButton
         private void TabControlWithCloseButton_HandleCreated(object sender, EventArgs e)
         {
             SendMessage(this.Handle, TCM_SETMINTABWIDTH, IntPtr.Zero, (IntPtr)16);
-        }
-        private void TabControlWithCloseButton_Selecting(object sender, TabControlCancelEventArgs e)
-        {
-           
         }
         private void TabControlWithCloseButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -63,14 +58,14 @@ namespace TabControlWithCloseButton
             var tabPage = this.TabPages[e.Index];
             var tabRect = this.GetTabRect(e.Index);
             tabRect.Inflate(-2, -2);
-            {
-                var closeImage = Properties.Resources.Close;
-                e.Graphics.DrawImage(closeImage,
-                    (tabRect.Right - closeImage.Width + 10),
-                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
-                TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
-                    tabRect, tabPage.ForeColor, TextFormatFlags.Left);
-            }
+
+            var closeImage = Properties.Resources.Close;
+            e.Graphics.DrawImage(closeImage,
+                (tabRect.Right - closeImage.Width + 10),
+                tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
+            TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
+                tabRect, tabPage.ForeColor, TextFormatFlags.Left);
+
         }
     }
 }
