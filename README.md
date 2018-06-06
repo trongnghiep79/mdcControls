@@ -13,7 +13,7 @@ You can handle `MouseDown` or `MouseClick` event and check if the last tab recta
 
 To prevent selection the last tab, you can handle `Selecting` event of control and check if the selecting tab is the last tab, cancel the event.
 
-**Draw Close Button and Add Button**
+**Draw Close Button**
 
 To draw close button, you can handle `DrawItem` event. 
 
